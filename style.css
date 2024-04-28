@@ -76,7 +76,7 @@ body {
 
 .profile-image-container,
 .top-card {
-  flex: 1; /* This makes both elements take up equal space, probably going to rework */
+  flex: 1; 
 }
 
 .top-container {
@@ -109,7 +109,8 @@ body {
 }
 
 .card-icons a,
-.top-card a {
+.top-card a,
+.bottom-icons a {
   text-decoration: none;
 }
 
@@ -179,4 +180,82 @@ body {
 
 .bottom-icons {
   margin-top: 20px;
+}
+
+@media screen and (max-width: 1000px) {
+  body {
+    padding: 0px 5vw; /* Adjust padding for smaller screens */
+  }
+
+  .top-container {
+    padding: 30px; /* Less padding for the top container */
+  }
+
+  .cards {
+    grid-template-columns: repeat(2, 1fr); /* Only two cards per row */
+  }
+
+  .profile-name {
+    font-size: 36px;
+  }
+
+  
+  .card,
+  .top-card {
+    max-width: 100%; 
+    height: auto; /
+  }
+
+}
+
+@media screen and (max-width: 500px) {
+  body {
+    padding: 0px 3vw; /* Even smaller padding for mobile */
+  }
+
+  .top-container {
+    padding: 20px; /* Less padding for the top container */
+    flex-direction: column; 
+  }
+
+  .cards {
+    grid-template-columns: 1fr; /* One card per row */
+  }
+
+  
+  .profile-name {
+    font-size: 24px; 
+  }
+
+  
+  .github,
+  .twitter,
+  .external,
+  .phone-icon,
+  .email-icon {
+    width: 20px; 
+  }
+
+  .bottom-container {
+    flex-direction: column;
+    align-items: center; 
+  }
+
+  
+  .card,
+  .top-card {
+    padding: 10px; /* Less padding on the cards */
+    margin-bottom: 20px; /* Space out stacked cards */
+  }
+
+  
+  .card-icons a,
+  .top-card a,
+  .bottom-icons a {
+    padding: 10px; /* Larger area for tapping */
+  }
+
+  .bottom-image img {
+    max-width: 200px;
+  }
 }
