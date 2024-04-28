@@ -1,0 +1,60 @@
+body {
+  padding: 0px 200px;
+}
+
+.github,
+.twitter,
+.external,
+.phone-icon,
+.email-icon {
+  width: 25px;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 16px;
+}
+
+.card-image {
+  width: 100%; /* Image takes full width of its container */
+  height: 300px;
+  object-fit: cover; /* Maintains aspect ratio, crops excess parts */
+}
+
+.profile-image {
+  position: relative;
+  max-width: 100%;
+  height: auto;
+}
+
+.profile-name {
+  transform: translateY(-100%) translateX(20%); /* Translate breaks with flex / different sizing */
+  color: whitesmoke;
+  font-size: 48px;
+}
+
+.profile-image-container {
+  display: flex;
+  flex-direction: column;
+  max-width: 400px;
+}
+
+.top-card {
+  display: flex;
+  flex-direction: column;
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 16px;
+  max-width: 500px;
+  max-height: 300px;
+}
+
+.top-card h1 {
+  margin-bottom: 0;
+}
+
+.top-container {
+  display: flex;
+}
