@@ -1,5 +1,16 @@
+@font-face {
+  font-family: Playfair;
+  src: url(PlayfairDisplay-VariableFont_wght.ttf);
+}
+
+html {
+  background-color: whitesmoke;
+}
+
 body {
+  margin: 0;
   padding: 0px 10dvw;
+  font-family: "Playfair", "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 
 .github,
@@ -26,7 +37,9 @@ body {
   position: relative;
   max-width: 100%;
   height: auto;
-  padding-top: 24px;
+  box-shadow: 0 4px 8px rgba(0, 0.5, 0.5, 0.7);
+  justify-self: center;
+  transform: translateY(8%);
 }
 
 .profile-name {
@@ -45,7 +58,7 @@ body {
   display: flex;
   flex-direction: column;
   background-color: #ffffff;
-  border-radius: 8px;
+  border-radius: 4px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   padding: 16px;
   max-width: 500px;
@@ -72,6 +85,8 @@ body {
   display: flex;
   flex-wrap: wrap;
   min-width: 320px;
+  gap: 10px;
+  justify-content: center;
 }
 
 .top-container::before {
@@ -93,6 +108,75 @@ body {
   align-items: center;
 }
 
-.card-icons a {
+.card-icons a,
+.top-card a {
   text-decoration: none;
+}
+
+.top-icons {
+  align-self: flex-end;
+}
+
+.bottom-container {
+  color: whitesmoke;
+  background-image: linear-gradient(to top, #ffffff, #0d1039);
+  display: flex;
+  justify-content: space-evenly;
+  padding: 20px;
+  flex-wrap: wrap;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  background-color: #ffffff;
+  border-radius: 2px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 16px;
+  max-width: 500px;
+  min-width: 250px;
+  max-height: 600px;
+  justify-self: center;
+  align-self: flex-start;
+  flex: 1;
+}
+
+.bottom-image {
+  align-self: center;
+  opacity: 20%;
+  transition: opacity 100ms ease-in;
+}
+
+.bottom-image img {
+  margin: 10px;
+  max-width: 350px;
+  border: 2px solid #1a2b4e;
+  border-radius: 10px;
+}
+
+.bottom-image:hover {
+  opacity: 100%;
+}
+
+.phone svg,
+.email svg {
+  fill: white;
+}
+
+.phone p,
+.email p {
+  margin: 0;
+  font-size: 20px;
+  align-self: center;
+}
+
+.phone,
+.email {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.bottom-icons {
+  margin-top: 20px;
 }
